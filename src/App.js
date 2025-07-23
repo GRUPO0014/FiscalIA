@@ -13,11 +13,6 @@ import Video from './components/Video';
 import { ObjetivosPage } from './components/List';
 import Login from './components/Login';
 import { useDarkMode } from './DarkModeContext';
-import { Amplify } from 'aws-amplify';
-import { Authenticator } from '@aws-amplify/ui-react';
-import awsExports from './aws-exports';
-
-import '@aws-amplify/ui-react/styles.css';
 
 Amplify.configure(awsExports);
 
@@ -37,20 +32,6 @@ function Header(){
 function App(){
   const loginMode = true;
   return (    
-      loginMode ?
-      <div>
-        <h2>Login Mode is ON</h2>
-        <Authenticator>
-          {({ signOut, user }) => (
-            <main>
-              <h1>¡Hola, {user.username}!</h1>
-              <button onClick={signOut}>Cerrar sesión</button>
-            </main>
-          )}
-        </Authenticator>
-
-      </div>
-      :
       <div className="App">
         <nav>
           <Link to="/">Home</Link>
