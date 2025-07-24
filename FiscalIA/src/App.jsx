@@ -3,6 +3,14 @@ import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
 
+/**
+ * Main application component for the Vite + React starter.
+ *
+ * Displays Vite and React logos, a counter button, and helpful instructions.
+ *
+ * @component
+ * @returns {JSX.Element} The rendered application UI.
+ */
 function App() {
   const [count, setCount] = useState(0)
 
